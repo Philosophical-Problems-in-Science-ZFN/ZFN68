@@ -1,0 +1,566 @@
+\begin{artengenv}{Roman Krzanowski}
+	{Why can information not be defined as being purely epistemic?}
+	{Why can information not be defined as being purely epistemic?}
+	{Why can information not be defined as being purely epistemic?}
+	{Pontifical University of John Paul II in Krakow, Poland}
+	{The concept of information can be viewed from two perspectives, namely epistemic and ontological. In the epistemic view, information is associated with meaning, semantics, and knowledge, while in the ontological view, it is understood as structures and forms of objects. Information is most often perceived as epistemic information, yet a closer look at epistemic information reveals that this concept does not account for ontological information. This paper poses the following question: Should we select epistemic or ontological information as our primary concept of information, or should we acknowledge that both kinds of information are required for a full comprehension? The discussion here is supported by references to modern research in physics, computing, cosmology, and information sciences.}
+	{information, epistemic information, ontological information, quantified models of information.}
+
+
+
+
+\section{The problem of information}
+\enlargethispage{\baselineskip}
+This paper considers whether information should be understood as epistemic or ontological content or whether we need both concepts to fully account for the nature of information. While this paper suggests possible answers to the question and indicates some of the consequences for a particular choice, its objective is to demonstrate that both views can be argued for and that both perspectives have found recognition in scientific literature.
+
+This discussion about the nature of information touches on many core issues of philosophy of the mind, ontology, and epistemology, and it draws in several domain-specific concepts from physics, mathematics, thermodynamics, computer science, and biology. With limited space, this paper merely outlines the issues involved, because an in-depth analysis would require an extensive dedicated study. The terms used in this paper, such as the mind, a conscious agent, meaning, and knowledge are used with very precise meanings because they can be easily misinterpreted.
+
+\enlargethispage{\baselineskip}
+We begin with a trivial observation, one that is likely the only claim about information that almost everyone agrees with: We lack a universal concept of information that satisfies everyone. We have had some very good proposals, such as Shannon's Theory of Communication (TOC) and Floridi's
+%\label{ref:RNDtEsSyqPLMk}(2010b)
+\parencite*[][]{floridi_philosophy_2010} %
+ General Definition of Information (GDI). They all have certain flaws, however. Quantifications such as those of Shannon-Weaver-Hartley 
+%\label{ref:RNDXyKjNBN8Tr}(Shannon, 1948; Shannon and Weaver, 1964; Hartley, 1928),
+\parencites[][]{shannon_mathematical_1948}[][]{shannon_mathematical_1964}[][]{hartley_transmission_1928}, %
+ Fisher 
+%\label{ref:RND6AWtJPyT5I}(Frieden, 1998),
+\parencite[][]{frieden_physics_1998}, %
+Kolmogorov
+%\label{ref:RNDHbUx86Yr2x}(Kolmogorov, 1965; Engl. tranls. Kolmogorov, 1968)
+\parencites*[][]{kolmogorov_1965}[Engl. tranls.][]{kolmogorov_three_1968} %
+and Chaitin
+%\label{ref:RNDQtUjiv1ktr}(2004),
+\parencite*[][]{chaitin_meta_2004}, %
+ among others, are mathematical formulas denoted as information measures, but they are designed for specific purposes under specific assumptions These metrics fulfill their specific purposes exceedingly well, so they are very useful. Nevertheless, the pragmatic (and domain-specific) or operational (technical) successes of an idea does not elevate its metaphysical status. Indeed, we may say that pragmatically efficient concepts are often metaphysically neutral.\footnote{We may even say that Shannon's work on the theory of communication (TOC) has led to certain distortions regarding the concept of information, and we are still mostly living in his shadow. To be fair, the subsequent misinterpretations and distortions of the TOC were committed by his followers (against Shannon's better advice), so they were out of Shannon's hands. See Shannon's warning 
+%\label{ref:RNDHqdaEtB7uS}(Shannon, 1956)
+\parencite[][]{shannon_bandwagon_1956} %
+ or Pierce 
+%\label{ref:RNDuWQz1fBAm8}(1961).
+\parencite*[][]{pierce_symbols_1961}.%
+} Thus, these concepts of information are not of general import, even if they are ``interpreted'' as such. So, what about the other plentiful conceptualizations of information? Floridi's GDI is by definition a concept of semantic information. However, on looking closely at the definition, the GDI assumes the existence of a quasi-physical foundation of information, which is denoted as the \textit{infon}. The rather ambiguous explanation of this foundational \textit{infon} leaves the whole concept of the GDI rather baseless. Other less comprehensive classifications and definitions of information have not produced common classification criteria or common differentiating/classification factors, nor have they proposed generally accepted conceptualizations. They are either too divergent or too narrow, and they are often contradictory. On looking at these classifications and definitions, one may realize that the scope of the concepts associated with ``information'' is so wide that it makes this idea almost meaningless and empty. Somes elected classifications of information are summarized in Table \ref{tab1-krza}.
+
+\begin{small}
+\begin{longtable}{p{.2\textwidth}p{.7\textwidth}}
+{\bfseries Study} &
+{\bfseries Classes, groupings, or differentiating features}\\
+Wersig and Neveling
+%\label{ref:RND9rAzdzJUBh}(1975)
+\parencite*[][]{wersig_phenomena_1975}%
+ &
+Information as:
+
+\begin{itemize}
+\item structure, independent of any human perceiving it;
+\item knowledge built on the basis of perception of the structure of the world;
+\item a ``message'' or the meaning of the message;
+\item the effect of communication; and
+\end{itemize}
+\begin{itemize}
+\item the process of communication.
+\end{itemize}
+\\
+Buckland
+%\label{ref:RNDayOCwph7KT}(1991)
+\parencite*[][]{buckland_information_1991}%
+ &
+Information as:
+
+\begin{itemize}
+\item information-as-process;
+\item information-as-knowledge; and
+\item information-as-thing.
+\end{itemize}
+\\
+Losee
+%\label{ref:RNDYtMTYioTrX}(1997)
+\parencite*[][]{losee_discipline_1997}%
+ &
+Information as:
+
+\begin{itemize}
+\item the meaning and use of a message, as well as knowledge;
+\item a fundamental characteristic of physical systems and structures (or it is a structure);
+\item related to data transmission in communication systems; and
+\item an output of the process.
+\end{itemize}
+\\
+Floridi
+%\label{ref:RNDCW3YHfRBbC}(2010b)
+\parencite*[][]{floridi_philosophy_2010}%
+ &
+Information as a multi-dimensional concept:
+
+\begin{itemize}
+\item analogue, digital or binary;
+\item primary, secondary, meta-, operational, and derivative;
+\end{itemize}
+\\
+Lenski
+%\label{ref:RNDq9puCVOOqG}(2010)
+\parencite*[][]{lenski_information_2010}%
+ &
+Information as:
+
+\begin{itemize}
+\item a difference that makes the difference;
+\item the values of characteristics in the processes' output, capable of transforming structure; or
+\item that which modifies a knowledge structure.
+\end{itemize}
+\\
+Nafria
+%\label{ref:RNDQ9vCxVNL0Y}(2010)
+\parencite*[][]{nafria_what_2010}%
+ &
+Information can be described as:
+
+\begin{itemize}
+\item ontological -- epistemic;
+\item semiotic (syntactic, semantic, and pragmatic); and
+\item discipline-based.
+\end{itemize}
+\\
+Adriaans
+%\label{ref:RNDo3t2ph4Dmm}(2019)
+\parencite*[][]{adriaans_information_2019}%
+ &
+Information as:
+
+\begin{itemize}
+\item quantitative (using mathematical formalism, such as Shannon's entropy, Kolmogorov, Fisher, Klir); and
+\item qualitative (state of an agent).
+\end{itemize}
+\\
+\caption{Selected classifications of information.\protect\footnotemark}\label{tab1-krza}
+\footnotetext{\ This is of course not an exhaustive list of classifications, because that would be a very long list indeed. For example, John Collier
+%\label{ref:RNDFiG97Feoba}(1990)
+\parencite*[][]{hanson_intrinsic_1990} %
+ classified theories of information into mathematical theories of information, communication theories, algorithmic or computational theories, physical information theories, and measurement theories. Giovanni Sommaruga 
+%\label{ref:RNDm04ahtj4Rw}(2009),
+\parencite*[][]{sommaruga_one_2009}, %
+ meanwhile, proposed three classes of concepts of information: ordinary language concepts, information theoretical concepts, and formal theoretical concepts. Peter Adriaas and Johan van Benthem 
+%\label{ref:RNDf3hxsWkZFe}(2008)
+\parencite*[][]{adriaans_introduction_2008} %
+ proposed three major concepts of information: Information-A for knowledge and logic; information-B for probabilistic and information-theoretical formulations; and Information-C for algorithmic and code-compression conceptualizations. Information-B and -C are quantified. More classifications of information can be found, but listing them all would be nonsensical, because what matters is their shared weakness.}
+\end{longtable}
+\end{small}
+
+
+
+%Table 1. Selected classifications of information.\footnote{This is of course not an exhaustive list of classifications, because that would be a very long list indeed. For example, John Collier
+%%\label{ref:RNDFiG97Feoba}(1990)
+%\parencite*[][]{hanson_intrinsic_1990} %
+% classified theories of information into mathematical theories of information, communication theories, algorithmic or computational theories, physical information theories, and measurement theories. Giovanni Sommaruga 
+%%\label{ref:RNDm04ahtj4Rw}(2009),
+%\parencite*[][]{sommaruga_one_2009}, %
+% meanwhile, proposed three classes of concepts of information: ordinary language concepts, information theoretical concepts, and formal theoretical concepts. Peter Adriaas and Johan van Benthem 
+%%\label{ref:RNDf3hxsWkZFe}(2008)
+%\parencite*[][]{adriaans_introduction_2008} %
+% proposed three major concepts of information: Information-A for knowledge and logic; information-B for probabilistic and information-theoretical formulations; and Information-C for algorithmic and code-compression conceptualizations. Information-B and -C are quantified. More classifications of information can be found, but listing them all would be nonsensical, because what matters is their shared weakness.}
+
+The conclusion is rather self-evident and unilluminating (as it is rather obvious): Information is a polysemantic concept with many, often contradictory, definitions (most people writing about information report the same impression).
+
+We claim that information can be fundamentally conceptualized as being either epistemic or ontological. This proposed ``bifocal'' view is imperfect, however. There are likely cases where it is difficult to cleanly allocate information into one of these two categories. Nevertheless, with this proposed perspective, we can generally classify most concepts of information into one of these two classes and gain a revealing perspective on the concept of information.
+
+\section{Information: the epistemic view}
+In this view point, information as a concept is centered on a human or other conscious agent.\footnote{The term ``a conscious agent'' may, in addition to human agents, include animals or artificial systems.} We call this epistemic information, emphasizing its relation to knowledge and meaning, and denote it as information\textsubscript{E} or I\textsubscript{E}. Having this kind of information in mind, Norbert Weiner states, ``Information is a name for the content of what is exchanged with the outer world as we adjust to it, and make our adjustment felt upon it''
+%\label{ref:RNDHpEsscgR1G}(Wiener, 1989, p.17).
+\parencite[][p.17]{wiener_human_1989}. %
+ Mean while, Heinz von Foerster claims, ``Informationis a relational concept that assumes meaning only when related to the cognitive structure of the observer'' 
+%\label{ref:RNDoFX1tImBWn}(Foerster, 1980, p.3).
+\parencite[][p.3]{foerster_epistemology_1980}. %
+ Similar opinions by scientists, philosophers, and engineers have been voiced in most of the current discussions about information. Indeed, the concept of epistemic information has seen many incarnations, so there is no single definition that is acceptable to everyone or even to some nebulous majority.\footnote{The number of supporters actually does not matter, because in philosophy, ideas are not selected through democratic voting. Quite often, the ideas rejected by the majority actually contain the truth.} Take for example, Bar-Hiller and Carnap 
+%\label{ref:RNDJdZYYoz3Xq}(1953),
+\parencite*[][]{bar-hillel_semantic_1953}, %
+ Brookes 
+%\label{ref:RNDv8u1209gNK}(1980),
+\parencite*[][]{brookes_foundations_1980}, %
+ Rucker 
+%\label{ref:RNDUwnpSiGZYX}(2013 [first published 1987]),
+\parencite*[][]{rucker_mind_2013}, %
+Buckland
+%\label{ref:RNDFBbCRxYBxf}(1991),
+\parencite*[][]{buckland_information_1991}, %
+ Devlin 
+%\label{ref:RNDC7Ppqiativ}(1991),
+\parencite*[][]{devlin_logic_1991}, %
+ Loose 
+%\label{ref:RNDIy5YdaktYf}(1997),
+\parencite*[][]{losee_discipline_1997}, %
+ Sveiby 
+%\label{ref:RNDlmiBaGsP7W}(1998),
+\parencite*[][]{sveiby_what_1998}, %
+ Dretske 
+%\label{ref:RNDXrcd88nVXZ}(1999),
+\parencite*[][]{dretske_knowledge_1999}, %
+ Casagrande 
+%\label{ref:RNDbHsW02yCDd}(1999),
+\parencite*[][]{casagrande_information_1999}, %
+ Floridi 
+%\label{ref:RNDY3y5fQOZkz}(2010a; 2010b),
+\parencites*[][]{floridi_information_2010}[][]{floridi_philosophy_2010}, %
+Burgin
+%\label{ref:RND3PKOIxU5z8}(2003),
+\parencite*[][]{burgin_information_2003}, %
+ Lenski 
+%\label{ref:RNDQe9M9zIHdU}(2010),
+\parencite*[][]{lenski_information_2010}, %
+ Vernon 
+%\label{ref:RNDKFNjq4quHx}(2014),
+\parencite*[][]{vernon_artificial_2014}, %
+ Dasgupta 
+%\label{ref:RNDeLm65IUn5D}(2016),
+\parencite*[][]{dasgupta_computer_2016}, %
+ or Carrol 
+%\label{ref:RNDoDR06MCxpI}(2017),
+\parencite*[][]{carroll_big_2017}, %
+ among others. Each of these authors created a somewhat different version of epistemic information, but these different versions have several similarities. They all associate information with meaning, knowledge, or semantics,\footnote{Meaning, knowledge, and semantics are some of the terms used by different researchers in defining epistemic information.} with a common thread that allows them to be collected under one heading.\footnote{As we will see, very similar concepts to epistemic information, just more restricted in scope, have been introduced by different authors as semantic information 
+%\label{ref:RNDo5bxzL9CVp}(e.g. Bar-Hillel and Carnap, 1953; Dretske, 1999),
+\parencites[e.g.][]{bar-hillel_semantic_1953}[][]{dretske_knowledge_1999}, %
+ control information, cognitive information 
+%\label{ref:RNDCcU7wMOMj4}(Collier, 1990),
+\parencite[][]{hanson_intrinsic_1990}, %
+ or anthropomorphic information 
+%\label{ref:RNDr3o2hny0dN}(Jadacki and Brożek, 2005).
+\parencite[][]{heller_na_2005}. %
+ Of course, as we have indicated, most definitions of information in the current dictionaries define information with this understanding.} Epistemic\footnote{``Epistemic […] describes anything that has some relation to knowledge'' and ``Epistemology, or the theory of knowledge, is that branch of philosophy concerned with the nature of knowledge, its possibility, scope and general basis'' 
+%\label{ref:RNDnpurPUIO14}(Honderich, 1995).
+\parencite[][]{honderich_oxford_1995}. %
+ For a specific domain of discourse (e.g., computer systems, artificial cognitive agents), the concept of knowledge may be defined in domain-specific terms while retaining the generic meaning.} information is associated with knowledge, belief, or a communication process in its more generally and broadly understood meaning.\footnote{Meaning has many interpretations. For this study, if not otherwise stated, we follow the definition from the philosophy of language, where the term ``meaning'' denotes how language relates to the world. A review of theories of meaning is beyond the scope and purpose of this work, but an extensive list of references can be found in the work of Speaks 
+%\label{ref:RNDeLKijIcAOr}(2018)
+\parencite*[][]{speaks_theories_2018} %
+ and other sources. } Epistemic information exists only if someone or something recognizes something as information. (Some may suggest including artificial or other biological systems, but we need to be careful what we assign epistemic processing capacities to).
+
+Epistemic information is defined in the context of a communication system, with a sender, a receiver, and a communication process. This communication system may have many realizations
+%\label{ref:RNDnVcxNYkp0z}(e.g. Cherry, 1978; Shannon, 1948; Maynard Smith, 2000; Vernon, 2014),
+\parencites[e.g.][]{cherry_human_1978}[][]{shannon_mathematical_1948}[][]{maynard_smith_concept_2000}[][]{vernon_artificial_2014}, %
+ but it is of the general format as described by Casti 
+%\label{ref:RNDNDGGBM1oRU}(1990).
+\parencite*[][]{casti_paradigms_1990}. %
+ Epistemic information exists specifically in, and for, the mind, which is broadly understood as a complex of cognitive faculties, of the receiver or/and the originator.\footnote{The originator or receiver may have an extended meaning, indicating a natural (i.e., not human–made) or artificial system. We may also use the term ``cognitive system'' as a more general alternative to ``the mind.''} It exists when communicated (such as being created, sent, and received) as a message. This dependency on the sender, receiver, and their cognitive functions makes information epistemically and ontologically subjective (i.e., it makes this information dependent on something else to exist.) Thus, epistemic information is relative to the cognitive faculties of a receiver or sender. (Cognitive faculties are understood very broadly here, with the human mind at one end of the spectrum and artificial systems with sensory functions at the other end.) Epistemic information is relative to the cognitive system, so a specific interpretation of the message, meaning, and knowledge depends on the specific system. This cognitive system may be a person, an organism, or a mechanical or electronic device, depending on how broadly we want to understand cognitive functions. In most cases, a cognitive system is a receiver of information, but it may also be a sender. Received or sent information is different for a human agent, a non-human biological system (e.g., a cell, a plant, a virus, a fragment of a DNA strand), or an artificial cognitive system. Yet within a specific system, the message, meaning, and knowledge fulfill the same role or function. What this means is that definitions of what a message is, what its meaning is, and what constitutes an agent is context-dependent.
+
+In Table \ref{tab2-krza} below, we group conceptualizations of epistemic information into those related to human cognitive agents, biological agents, artificial cognitive agents, and formal models such as logic models and quantitative models. In this classification, we assume an extended view of cognitive faculties beyond that of human agents. The classification includes the formal models of Shannon-Weaver-Hartley and related proposals, Chaitin's metric, statistical models, and Devlin's information logic (closely tied with a function of an agency).The common element in all these conceptualizations is how information is conceived as having some meaning to a receiver or sender and how information comes in a message or is communicated through a system. Note that this list is by no means exhaustive.
+
+\begin{small}
+%\renewcommand*{\arraystretch}{1.4}
+\begin{longtable}{p{.2\textwidth}p{.2\textwidth}p{.5\textwidth}}
+{\bfseries Category of a model} &
+{\bfseries Author} &
+{\bfseries Main claim}\\
+Human Cognitive agent &
+Paul Beyond-Davis
+%\label{ref:RNDGlvlgOHxMh}(2009)
+\parencite*[][]{beynon-davies_business_2009}%
+
+
+Luciano Floridi
+%\label{ref:RNDVODwhFTa6P}(2010b)
+\parencite*[][]{floridi_philosophy_2010}%
+ &
+Information is data + meaning.\\
+&
+Gregory Bateson
+%\label{ref:RNDk3Ij9qZiMx}(1979)
+\parencite*[][]{bateson_mind_1979}%
+ &
+Information consists of differences that make a difference.\\
+&
+Fred Dretske
+%\label{ref:RNDBbigyfPfxw}(1999)
+\parencite*[][]{dretske_knowledge_1999}%
+ &
+Information is sharply distinguished from meaning, at least for the concept of meaning relevant to semantic studies.\\
+&
+Buckland
+%\label{ref:RNDveMzPg3oVF}(1991)
+\parencite*[][]{buckland_information_1991}%
+ &
+Information-as-thing, information-as-knowledge, information-as-process\\
+&
+Ratzan
+%\label{ref:RNDIw8xPlCabx}(2004)
+\parencite*[][]{ratzan_understanding_2004}%
+ &
+Information is meaning\\
+&
+Davenport
+%\label{ref:RND1P7GuBJBc6}(1997)
+\parencite*[][]{davenport_information_1997}%
+ &
+Information is ``data endowed with relevance and purpose.''\\
+Biological Agent &
+John Maynard Smith
+%\label{ref:RNDfoMBqK8sBS}(2000)
+\parencite*[][]{maynard_smith_concept_2000}%
+ &
+DNA transmission is equivalent to a human communication channel.\\
+Artificial cognitive agent &
+David Vernon
+%\label{ref:RND35RDE48snR}(2014)
+\parencite*[][]{vernon_artificial_2014}%
+ &
+Information is what an artificial cognitive system extracts from its environment.\\
+Formal models
+
+including logical and quantified models
+
+&
+Keith Devlin
+%\label{ref:RNDmZpBnyGuy5}(1991)
+\parencite*[][]{devlin_logic_1991}%
+ &
+``a fundamental form of information of relevance to that agent (a cognitive agent) is information of the form: Objects a1,…,an, have/have not property P.''\\
+&
+Claude Shannon
+%\label{ref:RNDq5JwpFhRZV}(1948)
+\parencite*[][]{shannon_mathematical_1948} %
+ and other models related to Hartley-Shannon-Weaver's entropy of information &
+H(X) (entropy of information in the TOC)\\
+&
+Solomonov \parencite*[][]{solomonoff_algorithmic_2010},
+Kolmogorov \parencite*[][]{kolmogorov_1965}, %
+%\label{ref:RND61d5QwkFKo}(1965; 1968),
+ Chaitin \parencite*{chaitin_algorithmic_1987} &
+String-complexity measures based on the UTM model\\
+&
+Fisher and Klir
+%\label{ref:RND0hntx8ruul}(1988)
+\parencite*[][]{klir_fuzzy_1988} %
+ Models &
+Statistical measures\\
+\caption{comparison of selected epistemic concepts for information.}\label{tab2-krza}
+\end{longtable}
+\end{small}
+%Table 2. A comparison of selected epistemic concepts for information.
+
+In summing up we may say that epistemic information is conceptualized in a range of domains and applications. These applications include human cognitive agents, biological systems, artificial cognitive systems, and logical and formal systems. The common element in all these concepts is how information is conceived as being relative to the knowledge of the agent or cognitive system in some way. Of course, what an agent, cognition, and knowledge is also needs to be understood relative to the context. Epistemic information in any of these definitions does not exist on its own. Its presence must be recognized by a reference system (i.e., an agent or an agency with some sort of cognitive capacity).
+
+Epistemic information is how information has been most frequently understood throughout the 20\textsuperscript{th} century, which is listed in the history books as the age of information. A reader can find others referring to this type of information as cognitive information (stressing information's dependency on cognitive systems), semantic information (stressing meaning as a defining feature of information), or more frequently just as information, adding further confusion to an already muddled concept.
+
+\section{Information: The ontological view}
+From an alternative viewpoint for information, we see information as a form or organization of nature. We do not ask, ``What is information?'' in the context of a specific domain, cognitive agent, or communication process. Instead, we conceive information as an objective, mind-independent phenomenon. We see it as something that is a part of the natural world, and people are not reference points for it. We call such a thing ontological information and denote it by information\textsubscript{O} or I\textsubscript{O}. Conceptualizing information as an ontological phenomenon is less understood and researched, yet as we will see, it is well justified.
+
+The list of researchers conceptualizing information as something ontological includes von Weizsäcker
+%\label{ref:RND3yNpLmOIrc}(1971),
+\parencite*[][]{weizsacker_einheit_1971}, %
+ Turek 
+%\label{ref:RNDHLGEKP4yWo}(1978),
+\parencite*[][]{turek_filozoficzne_1978}, %
+ Mynarski 
+%\label{ref:RNDK3uT51fVFS}(1981),
+\parencite*[][]{mynarski_elementy_1981}, %
+ Heller 
+%\label{ref:RNDEiGnRM5Dqa}(1987, 2014),
+\parencites*[][]{heller_ewolucja_1987}[][]{heller_elementy_2014}, %
+ Collier 
+%\label{ref:RNDhNirmNZN90}(1990),
+\parencite*[][]{hanson_intrinsic_1990}, %
+ Stonier 
+%\label{ref:RNDAbdJJDpMs3}(1990),
+\parencite*[][]{stonier_information_1990}, %
+ Devlin 
+%\label{ref:RNDu19lNSZ1MV}(1991),
+\parencite*[][]{devlin_logic_1991}, %
+ de Mul 
+%\label{ref:RND1x6iRO1eGZ}(1999),
+\parencite*[][]{mul_informatization_1999}, %
+ Polkinghorne 
+%\label{ref:RNDP9eSMgIlFj}(2000),
+\parencite*[][]{polkinghorne_faith_2000}, %
+ Jadacki and Brożek 
+%\label{ref:RNDx0ZXJyw7x7}(2005),
+\parencite*[][]{heller_na_2005}, %
+ von Baeyer 
+%\label{ref:RNDRbIAVJO6PP}(2005),
+\parencite*[][]{baeyer_information_2005}, %
+ Seife 
+%\label{ref:RNDqlXKnOK6lZ}(2006),
+\parencite*[][]{seife_decoding_2006}, %
+ Dodig-Crnkovic 
+%\label{ref:RNDO0pNiz5UW1}(2012),
+\parencite*[][]{dodig-crnkovic_alan_2012}, %
+ Hidalgo 
+%\label{ref:RNDIAxCPCzKat}(2015),
+\parencite*[][]{hidalgo_why_2015}, %
+ Wilczek 
+%\label{ref:RNDrWE8RTy2FQ}(2015),
+\parencite*[][]{wilczek_beautiful_2015}, %
+ Rovelli 
+%\label{ref:RNDqekLNMIb1Q}(2016),
+\parencite*[][]{rovelli_meaning_2016}, %
+ Carroll 
+%\label{ref:RNDuMfxzgl2n8}(2017),
+\parencite*[][]{carroll_big_2017}, %
+ Davies 
+%\label{ref:RNDcphOUt30gF}(2019),
+\parencite*[][]{davies_demon_2019}, %
+ and Sole and Elena 
+%\label{ref:RND3eJeihvyTa}(2019).
+\parencite*[][]{sole_viruses_2019}. %
+ This list is certainly not exhaustive, but the above sources give a comprehensive overview of the current discussion for this topic.
+
+The idea of information as an ontologically objective phenomena has been encountered in diverse contexts. Different authors have also attributed different yet somewhat similar sets of properties to it. In these studies, ontological information is regarded as information/phenomenon that exists independently of a human observer. In fact, it exists independently of any observer or any cognitive system, even artificial or biological ones. Ontological information exists independently of any mind\footnote{The word \textit{mind} is understood here as a set of cognitive faculties including consciousness, perception, thought, judgment, and memory. It can also be understood as an artificial system that has a subset of cognitive-like functions.} (natural or otherwise), any system or process, or any cognitive state.
+
+Ontological information is objective.\footnote{The epistemic status of ontological information seems to be subjective, because despite the objectivity of ontological information (as a carrier of epistemic information, as will be explained later in this work), its value as knowledge or a message varies with the (natural or artificial) system receiving the information.}
+It is a natural phenomena with no inherent meaning, an element of nature itself,\footnote{The word ``nature'' has many meanings (for example see the entry in
+%\label{ref:RNDiedq65DwgQ}(Honderich, 1995)
+\parencite[][]{honderich_oxford_1995}%
+), and there are obvious differences between the common usage and scientific and philosophical usage. In most cases, while the meaning should be clearly indicated by the context in which the word is used, some may still object to the lack of precision.} and it is ``responsible'' in some way for its structure or order (or perceived structure or order) and its organization.
+
+Quoted below is what some authors say about ontological information. Kevin Devlin
+%\label{ref:RNDHqMa8E3TBf}(1991, p.2)
+\parencite*[][p.2]{devlin_logic_1991} %
+ writes that:
+
+\myquote{
+[…] man can recognize and manipulate ‘information,' but is unable to give precise definition as to what exactly it is being recognized and manipulated. Perhaps information should be regarded as (or maybe is) a basic property of the universe, alongside matter and energy (and being ultimately interconveritible with them).
+}
+
+
+Sean Carroll
+%\label{ref:RNDU18fODCvkt}(2017, p.296)
+\parencite*[][p.296]{carroll_big_2017} %
+ postulates that:
+
+\myquote{
+Words like ‘information' are a useful way of talking about certain things that happen in the universe […] the fact that information is an effective way of characterizing certain physical realities in a true and non-trivial insight into the world.
+}
+
+%\label{ref:RNDjaLXHBXhan}(Carroll, 2017, p.297)
+\parencite[][p.297]{carroll_big_2017} %
+ further points to the two views on information being discussed here:
+
+\myquote{
+We tend to use the word ‘information' in multiple, often incompatible, ways. In chapter 4, we talked about conservation of information in the fundamental physical laws. There, what we might call the ‘microscopic information' refers to a complete specification of the exact state of a physical system, that is neither created or destroyed. But often we think of a higher-level macroscopic concept of information, one that can indeed come and go; if a book is burned, the information contained in it is lost for us, even if not to the universe.
+}
+
+Carlo Rovelli
+%\label{ref:RNDCj7SYUDCk3}(2016, pp.216–217),
+\parencite*[][pp.216-217]{rovelli_meaning_2016}, %
+ meanwhile, suggests that:
+
+\myquote{
+Today, physicists commonly accept the idea that information can be used as a conceptual tool to throw light on the nature of heat. More audacious, but defended today by an increasing number of theorists, is the idea that the concept of information can be useful also to the mysterious aspects of quantum mechanics.
+}
+
+
+Cesar Hidalgo writes that:
+
+\myquote{
+The universe is made of energy, matter, and information
+%\label{ref:RNDocbAljTWER}(Hidalgo, 2015, p.15)
+\parencite[][p.15]{hidalgo_why_2015}%
+---adding that---[The world] is pregnant with information […] it is a neatly organized collection of structures, shapes, colors, and correlations. Such ordered structures are manifestations of information 
+%\label{ref:RNDFJlaSbCdbZ}(Hidalgo, 2015, p.17).
+\parencite[][p.17]{hidalgo_why_2015}.%
+}
+
+
+
+Tom Stonier
+%\label{ref:RNDCgzBlm1ZOt}(1990, p.25),
+\parencite*[][p.25]{stonier_information_1990}, %
+ meanwhile, writes that:
+
+\myquote{
+Any physical system which exhibits organization contains information. The definition of the term ‘information' becomes analogous to the physicist's definition of the term energy; energy is defined as the capacity to perform work. Information is defined as the capacity to organize a system or to maintain it in an organized state.
+}
+
+Many other similar views could be cited, but in all of them, information is regarded as an intrinsic feature of physical reality that is quantifiable, measurable, and observable.
+
+Researchers often interpret ontological information by recognizing its existence as the structure or order of nature. Ontological information is often equated with the form or shape of a natural or artificial object,\footnote{Hans von Baeyer quotes eight synonyms for form: arrangement, configuration, order, organization, pattern, structure, and relationship. The term ``relationships among the parts of the physical system'' seemed to him the most general term capable of covering ``applications in mathematics, physics, chemistry, biology and neuroscience''
+%\label{ref:RNDznqpDGED29}(Baeyer, 2005, p.22).
+\parencite[][p.22]{baeyer_information_2005}.%
+} although this is not entirely accurate. Thus, from this view point, information is a phenomenon that exists independently of the mind. Indeed, this is our fundamental assumption about ontological information. Being ontologically objective, it is mind-independent and thus has no intrinsic meaning. It also belongs to nature, which comes from a natural closure of our conceptualization of what it is, and it is perceived through, or as the structures or forms of objects (i.e., objects are what they are because they have organization).
+
+For the sake of completeness, we may attempt to provide the definition of ontological information, however, as a fundamental concept, ontological information may be eluding the precise explication (as energy or matter do, see e.g. Keith Devlin above). Stonier defines ontological information as ``the capacity to organize a system or to maintain it in an organized state''. Carroll refers to ontological information as ``a complete specification of the exact state of a physical system''. Heller states that ``the word […] is a structure. This structure contains encoded information or is information''
+%\label{ref:RNDXIMWnDGccm}(Heller, 1995, p.170).
+\parencite[][p.170]{heller_nauka_1995}. %
+ More complex and formal definitions such as Turek's require the specification of the whole framework of concepts (form, set, structure, substance, etc.) so they are omitted here 
+%\label{ref:RNDhOdN9Z2Cew}(see e.g. Turek, 1978).
+\parencite[see e.g.][]{turek_filozoficzne_1978}. %
+ We may also mention Rovelli's 
+%\label{ref:RNDOo0mgw7Idr}(2016)
+\parencite*[][]{rovelli_meaning_2016} %
+ definition of ``a purely physical version of the notion of information.'' Rovelli defines information (relative) as a correlation between states of physical systems, which is in his own words ``downright crude physical correlation'' 
+%\label{ref:RNDqmJNxzsIuW}(Rovelli, 2016, p.1).
+\parencite[][p.1]{rovelli_meaning_2016}. %
+ The fact that his definition (derived from Shannon's information entropy) is applied to physical phenomena does not make it the definition of ontological information. Rovelli still looks for some form of meaning in physical structures (he calls it correlation), as he says ``purely physical definition of meaningful information.'' Ontological information, in the sense used in this paper, exists whether there is any correlation or not; it is the form of nature in a specific sense; nature as such has no meaning. Rovelli's concept of information seems to be just another mathematical representation of a certain perspective on nature's organization with rather overextended concept of meaning. The seat of meaning is a conscious agent, not physical structures, even if the ultimate nature of consciousness is biological.
+
+Table \ref{tab3-krza} below brings together the most commonly referenced characteristics of ontological and epistemic information.
+
+
+
+
+
+\begin{small}
+\begin{longtable}{p{.5\textwidth}p{.5\textwidth}}
+\centering{\bfseries Ontological Information} &
+\centering\arraybackslash{\bfseries Epistemic Information}\\
+Information has no meaning, so ontological information exists as a physical phenomena regardless of the presence, or absence, of any cognitive faculties. Physical reality by itself is meaningless.
+
+Information is physical phenomenon, so it exists in nature independently of the existence of any conscious agent.
+
+Information is responsible for the organization of the physical world and therefore conceptualized as form or structure. Forms or structures are therefore what quantified models of information denote.
+
+&
+Epistemic information is an interpreted physical stimuli—which we could call data, a signal, the state of a physical system, or some other physical phenomena—by a cognitive agent. The interpretation of physical stimuli by an agent is a complex process involving an evaluation of the stimuli. Epistemic information is not simply reducible to ontological information.
+
+Epistemic information (meaning) exists for a cognitive agent, and it is therefore relative to that cognitive agent. In other words, epistemic information is subjective.
+
+The cognitive agent may be a human agent, a biological system, or an artificial intelligence system, depending on how far we want to push the boundaries of what constitutes a cognitive system.
+
+\\
+\caption{The most commonly referenced characteristics of ontological and epistemic information.}\label{tab3-krza}
+\end{longtable}
+\end{small}
+
+\section{The dilemma of information}
+We have classified information into two types, namely ontological and epistemic. Ontological information is information without meaning, and it does not need a sender or a receiver to exist. It is a physical phenomenon that is perceived as an organization of something. Ontological information has found applications in cosmology, thermodynamics, physics, quantum mechanics, and metaphysics, and it has begun to manifest in information sciences. With ontological information, quantified models of information are reinterpreted as different mathematical representations on the informational structures. No one quantified model of information is supreme and some are just more useful than others depending on the application (like computing the capacity of a communication channel for optimal message coding (Shannon), or devising the smallest computer program to represent the message (Chaitin)). Ontological information may also justify a generalization of the concept of computing into one where computing transforms structures rather than manipulates symbols, as is the case with the universal Turing machine (UTM)
+%\label{ref:RNDiOB9jJTWE8}(Dodig-Crnkovic, 2012; Hidalgo, 2015).
+\parencites[][]{dodig-crnkovic_alan_2012}[][]{hidalgo_why_2015}. %
+ Such a view would align the theoretical models of computing (i.e., the UTM-centered ones) with advances in natural computing systems, such as neuromorphic computations 
+%\label{ref:RNDRO1TeRbgZG}(e.g. Shanahan, 2015).
+\parencite[e.g.][]{shanahan_technological_2015}. %
+ We refer to ontological information as structural information or the organization of natural and artificial phenomena.
+
+Epistemic information, meanwhile, is information related to concepts of knowledge, a cognitive agent, or meaning. Epistemic information is ``about'' something and is intended ``for someone.'' For epistemic information to exist, it requires a conscious agent to create and/or receive it, and it exists with that agent. Epistemic information represents what is meant by information in communication sciences, cognitive science, library science, biology, social sciences, and information technology. We may also refer to it as cognitive information (stressing its dependency on cognitive systems), semantic information (stressing meaning as a defining feature), or abstract information.
+
+Epistemic information does not recognize the presence of ontological information, yet it cannot disregard the physical reality and the physical stimuli that forms a large source of epistemic information. Thus, in the definitions for epistemic information, we find data, physical signals, infons,\footnote{See, for example, the work of Stonier
+%\label{ref:RNDejACLRHHLa}(1990),
+\parencite*[][]{stonier_information_1990}, %
+ Devlin 
+%\label{ref:RNDNoRdVXnlNm}(1991),
+\parencite*[][]{devlin_logic_1991}, %
+ Floridi 
+%\label{ref:RNDZ1SPaMhiYj}(2010b),
+\parencite*[][]{floridi_philosophy_2010}, %
+ and Martinez and Sequoiah-Grayson 
+%\label{ref:RNDCRuW3o26eO}(2016).
+\parencite*[][]{martinez_logic_2016}. %
+} or something else filling this gap (e.g., the GDI definition of 
+%\label{ref:RNDjuKQR1oy0q}(Floridi, 2010b)
+\parencite[][]{floridi_philosophy_2010}%
+).Simply speaking, the concept of epistemic information tends to disregard its physical basis. Thus, epistemic information, as it is, is not a complete description for the concept of information.
+
+In contrast, ontological information does account for the organization of natural objects and artifacts, but it cannot apply meaning and knowledge. It is by definition meaningless, so it is also an incomplete description for the concept of information.
+
+Ontological and epistemic information are closely connected. Ontological information ``gives shape'' to natural phenomena. It may then be ``intercepted'' by a cognitive agent and become epistemic information. In other words, epistemic information is ontological information as comprehended by a cognitive agent. This process of ``comprehension'' is complex and unreducible, and it is not an isomorphic transformation.
+
+In a sense, both types of information exist, ontological as something concrete and epistemic as an abstract view of knowledge. From this perspective, ontological information acts as the carrier of what can potentially become epistemic information. Indeed, it is its main source, with the cognitive faculties of the mind itself being another source. I\textsubscript{e }is contingent, dependent, and relative because it is located in the mind. I\textsubscript{o}, meanwhile, is objective and meaningless, because it exists as a physical fact. We may need I\textsubscript{o} to get I\textsubscript{e}, but I\textsubscript{e} acquires its own ``persistence'' once created. While there is an obvious bottom-up causation from I\textsubscript{o }to I\textsubscript{e}, there is also a top-down causation from I\textsubscript{e }to I\textsubscript{o}. This means that in many cases, the forms and organization in physical reality (e.g., manmade objects) are expressions of mental concepts (I\textsubscript{e}). We may therefore imply an emergence relation between the two forms of information. However, this emergence must be properly understood. I\textsubscript{e} emerges from I\textsubscript{o} as a non-reducible ``entity.'' I\textsubscript{e} cannot be explained purely in terms of I\textsubscript{o}, because it acquires features that do not exist at the I\textsubscript{o} level. Another interpretation would involve regarding I\textsubscript{o }as representing the level of physical reality, which is in itself a multi-level reality with complex structures at different levels of organization for nature. In fact, we have multiple levels of I\textsubscript{o }to reflect nature's complexity. I\textsubscript{e}, meanwhile, represents the reality at the level of a living conscious agent. This reflects I\textsubscript{o}, but the agent creates its own specific representation. Which particular interpretation of I\textsubscript{o} and I\textsubscript{e} is most accurate should be the subject of future research.
+
+\section{Conclusion}
+So, what is the conclusion of this study? If we accept that information is epistemic only, we are ignoring the discoveries of modern science and limiting ourselves to the anthropocentric (or agent-centered) perspective for information. However, this concept of information is incomplete, as we have endeavored to demonstrate in this paper.
+
+In contrast, if we postulate that information is ontological only, we imply that epistemic information can be reduced to, and expressed fully by, ontological information. This would be a grave error, because while epistemic information is largely derived from ontological information, we would be disregarding the fact that epistemic information has a certain individual presence, so it cannot be reduced to ontological information.
+
+However, we could accept that both forms of information exist, albeit in different ways, and both are required for a complete understanding of the concept of information. We could then further accept that these two types of information have mutual dependencies, although they are not reducible to each other. It appears that this duality in the information concept cannot be fully understood until we resolve the nature of cognitive processes and knowledge. We could risk the statement (going against naturalistic perspective) that for the full description of the universe and us in it
+%\label{ref:RNDLiPbPMJgew}(Tallis, 2016)
+\parencite[][]{tallis_mystery_2016} %
+ we need to recognize the existence of both types of information, epistemic and ontological, and may be ``word'' in John 1:1 meant that information is both.
+
+\section{Acknowledgments}
+I would like to thank Professor Pawel Polak for providing critical remarks and comments that were crucial in developing the ideas discussed in this paper.
+
+
+
+\end{artengenv}

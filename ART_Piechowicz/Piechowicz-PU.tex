@@ -1,0 +1,184 @@
+\begin{artengenv}{Robert Piechowicz}
+	{A Formal Reconstruction of the Notions of Belief, Utterance and Trust}
+	{A Formal Reconstruction of the Notions of Belief, Utterance and Trust}
+	{A Formal Reconstruction of the Notions of Belief, Utterance\\and Trust}
+	{Pontifical University of John Paul II in Krakow, Poland}
+	{Problem of epistemic activity and their relationship with language is very well known in philosophy. Undertaking this challenge in this article we shall present some logical constructions apparent in these issues. More precisely we want to describe some difficulties of formal reconstruction of the notion of belief and utterance and try to find broader perspective appointed by notion of trust. To realize this goals article shows how non-formal assumption about \textit{doxa} affects on its  formal construction. Then, logic of utterances---mainly based on Conversational Implicatures theory---and its relation to doxastic systems is discussed and, finally, article shows that more accurate description of these two notions needs broader perspective created by BIT system proposed by Ch-J. Liau.}
+	{logic, beliefs, utterances, trust.}
+
+
+
+\indent The problem of the epistemic activity and its relationship with language is well known in philosophy. Moreover, it is one of the discussed topics in logic and although many formally correct solutions are proposed, their application to the natural language is more than problematic. Taking up this challenge in the following article we will present a logical construction of these three issues: belief, utterance and trust. The first chapter bears a \textit{quasi}--historical sense and allows to make the notion of belief more precise. In second chapter some problems of the doxastic logic systems will be discussed and the manner in which the non-formal assumption about \textit{doxa} affect its formal construction will be presented. Third chapter will concern the logic of utterances and its relation to the doxastic systems. Finally, we will try to show that more accurate description of those two notions needs broader perspective created by trust logic.
+
+\section{Towards the doxastic logic}
+
+\indent Like in many other issues strong background for discussion of the notions of knowledge and belief from the logical point of view was provided by Aristotle in his works such as \textit{De Sophisiticis Elenchis} and both \textit{Analytics}. His analysis concerned the concepts of possibility, necessity, impossibility and contingency  became the important base for medieval thinkers such as Buridan, Pseudo Scotus, Ockham, and Ralph Strode who have extended the Aristotelian concepts to epistemic themes and problems \parencites[see][]{boh_epistemic_1993}{knuuttila_modalities_1993}.
+%(see Boh, 1993; Knuuttilla, 1993).
+During this period, the Pseudo-Scot and William of Ockham supplemented Aristotle’s study of mental acts of cognition and volition
+\parencite[see][p.130]{boh_epistemic_1993}.
+%(see Boh 1993, p. 130).
+Topics of epistemic logic discussed by medieval thinkers have a similar set of foundational assumptions with modern discussions like connection between knowledge and veracity and an observation that an epistemic agent cannot coherently assert ``p but I do not believe (know) p'', which was explicitly stated  by G. E. Moore in the 20\textsuperscript{th} century.
+
+The logical reflection on the epistemic and doxastic topics has been interrupted for many years. Philosophy evolved into other issues and, furthermore, thinkers did not have suitable tools for a more advanced analysis. The modern treatments of the logic of knowledge and belief arose after the Second World War and grew out of the work of such logicians as: Rudolf Carnap, Jerzy \L{}o\'{s}, Arthur Prior, Nicholas Rescher, G.H. von Wright. Von Wright suggested that any analysis of sentences about ``knowledge'' and ``belief'' needs the axiomatic approach. The logical systems developed by these thinkers were focused on ``relational operator $Kxp$ for ``$x$ knows $p$, where $Kx$ can be thought of as a parametrized modality characterizing  the person-relative epistemic status of a proposition''
+%tu
+%(Reschner, 2002, p , 478).
+\parencite[][p.478]{jacquette_epistemic_2002}
+The same kind of analysis was applied to belief and later to other epistemic states.
+
+	Every fundamental concept used in epistemology is ambiguous and even if some philosopher has an ambition to clear it’s meaning, the result of his attempt is strictly connected with other parts of his reflection. For that reason it is necessary to propose some distinction between three kinds of features of cognitive states: occurrence, disposition and accessibility. First of them denotes an active attitude to the considered information. In other words, occurrence means some actual epistemic action like knowing, believing, thinking or contemplation of something in the present time. But in everyday life we must have an occasion to start our intellectual activity and it will proceed because we have some mental disposition. Many types of information must have a special situational context to become conscious. 
+
+The third feature---accessibility---is a stronger condition then disposition. ``This is a matter not of what a person would say if asked (= dispositional knowledge) but what one could say if he is sufficiently clever about using the information that is at one’s disposal occurrently or dispositionally''
+%tu
+(Reschner, 2002, p , 478).
+\parencite[][p.478]{jacquette_epistemic_2002}
+The logical analysis of cognitive states is founded on this feature because it refers not to a real subject which can err in information processing but to an idealized subject which can apply any logical schema to infer proper conclusion from the given evidence.
+	
+\section{Fundamental systems of doxastic logic}
+
+\indent The first logical system aimed at the concept of belief was created by Jerzy \L{}o\'{s} at the end of the 1940s
+\parencite{los_logiki_1948}.
+%(Łoś, 1948).
+He tried to analyze sentences containing nonextensional expressions. As a good representative for this kind of expressions \L{}o\'{s} chose the following functor: ``x asserts, that p'' (formally $\mathbf{L}_{x}p$) and proposed these axioms
+\parencite[see][p.251]{lechniak_przekonania_2011}:
+%(see Lechniak,  2011, p. 251):
+\begin{gather}
+	\mathbf{L}_{x}p\equiv \neg \mathbf{L}_{x}\neg p,\tag*{1.} \\
+	\mathbf{L}_{x}\{(p\rightarrow q)\rightarrow [(q\rightarrow r)\rightarrow (p\rightarrow r)]\},\tag*{2.}\\
+	\mathbf{L}_{x}[p\rightarrow (\neg p\rightarrow q)],\tag*{3.}\\
+	\mathbf{L}_{x}[(\neg p\rightarrow p)\rightarrow p],\tag*{4.}\\
+	\mathbf{L}_{x}(p\rightarrow q)\rightarrow (\mathbf{L}_{x}p\rightarrow \mathbf{L}_{x}q),\tag*{5.}\\
+	(\forall_{x})\mathbf{L}_{x}p\rightarrow  p,\tag*{6.}\\
+	\mathbf{L}_{x}\mathbf{L}_{x} p\equiv\mathbf{ L}_{x}p.\tag*{7.}
+\end{gather}
+
+The system of Jerzy \L{}o\'{s} was truly pioneering and very interesting because it fixed quite strong meaning of the functor of assertion. First, assertion fixes non-contradictorily, that is, if an epistemic subject asserts a sentence then he can’t asserts its negation. This requirement is acceptable in the systems of the normal modal logic but many thinkers discuss its legitimacy applied to the real convictions. Moreover, this axiom asserts the completeness of system of beliefs which is more controversial. Despite of this---as it was mentioned in first part of this article---the first axiom of \L{}o\'{s}’s system---like its equivalents in other logics---designates the meaning of the functor of assertion and is not a description of its everyday use.\footnote{Those problems are discussed in
+\parencites[][p.80-82, 93-94]{marciszewski_podstawy_1972}{poczobut_sprzecznosci_1999}.}
+%(Marciszewski, 1972, p. 80-82, 93-94; Poczobut, 1997).}
+%tu
+
+The next three axioms show that fundamental clauses of the propositional logic are asserted. Actually, the classical base for the modal logic is built differently than in the system of Jerzy \L{}o\'{s} but his intention was twofold. Firstly, these axioms show that the discussed system is founded on the classical logic. Secondly, the assertion of the propositional calculi by subject gives him a list of procedures to the transformation of his own convictions. Of course, the application of some of the cognitive procedures is not necessary or is only declarative in the real mental activity. However, in the world of idealized subjects this epistemic tactic is unacceptable because of the last of the axioms. The introspective availability of one's own convictions implies their application which is regulated by the fifth axiom. The functor $\mathbf{L}$ is separable from the implication and its feature allows for the generation the new cognitive states.
+
+The fifth axiom---the only one with a quantifier---is coding the notion of the collective infallibility. This means that if some statement is recognized by all subjects then this statement is true. As it was mentioned above, from the point of view of the everyday communication practice this feature of assertion is inadequate.  However, ideal cognitive subjects who deductively generate their systems of convictions may create a language model of the world in this way. The collective assertion of same state may change its status from an individual prediction to intersubjectivity.
+
+A more liberal system may be generated by the weakening by the first of the axioms, that is\footnote{This question (and many others) are broadly discuted in
+\parencites[][p.254-264]{lechniak_przekonania_2011}[][p.75-88]{marciszewski_podstawy_1972}.}:
+%(Lechniak, 2011, p. 254-264; Marciszewski, 1972, p. 75-88).}:
+$$\mathbf{L}_{x}p\rightarrow \neg \mathbf{L}_{x}\neg p.$$
+What are the consequences of this modification? In system of \L{}o\'{s} the assertion of some state implies that its negation is not asserted and, equivalently, if negation is asserted then this state is not. The second implication is more problematic than the first because of the formulas:
+$$\neg \mathbf{L}_{x}\neg p\rightarrow  \mathbf{L}_{x} p$$
+$$\mathbf{L}_{x}\neg p\vee \mathbf{L}_{x}p,$$
+$$\mathbf{L}_{x}(\mathbf{L}_{x}\neg p\vee \mathbf{L}_{x}p).$$
+The last of these formulas generated only by definability of functors and last axiom is a declaration of the omniscience of a subject. There is no place to this problematic thesis in the modified system.
+
+Presently, logicians discuss one more problem of the functor of assertion. Except for the mentioned law of the positive introspection its following modified version is proposed:
+$$\mathbf{L}_{x}\neg \mathbf{L}_{x} p\equiv \neg \mathbf{ L}_{x}p.$$
+
+This equivalence codes the controversial dependence between the lack of conviction about something and the conviction about this lack of conviction that is present in the philosophical tradition since the times of Socrates. The empirical adequacy of this law is discussed but it seems important in logical systems which are coding rational beliefs. The full idealized rational reflection should not only show all epistemic states but must be able to give an introspective look on the lack of them as well.
+
+The contemporary systems of logic of the rational beliefs are created as a compromise between discussed propositions. If functor $\mathbf{L}_{x}$  is be replaced by $\mathbf{B}_{x}$ interpreted as ``x believes that'', then following axioms code its fundamental meaning:
+\begin{gather}
+\mathbf{B}_{x}\phi,\tag*{1.}\ 
+\text{where $\phi$ is a tautology of propositional logic},\\
+\mathbf{B}_{x}\mathbf{B}_{x} p\equiv\mathbf{ B}_{x}p,\tag*{2.}\\
+\mathbf{B}_{x}\neg\mathbf{B}_{x} p\equiv\neg \mathbf{ B}_{x}p.\tag*{3.}\\
+\mathbf{B}_{x}\neg p\rightarrow \neg \mathbf{B}_{x} p \tag*{4.}\\
+\mathbf{B}_{x}(p\rightarrow q)\rightarrow (\mathbf{B}_{x}p\rightarrow \mathbf{B}_{x}q).\tag*{5.}
+\end{gather}
+This system shows that rational beliefs are founded on the propositional logic and are introspectively available in both positive and negative sense, consistent and distributive by implication.
+
+\section{From convictions to utterances}
+
+\indent Although the doxastic logics are well-founded systems today, the complete description of the cognitive capacity of human beings (or AI) should include language ability because beliefs are epistemically inaccessible without communication. This statement leads to the non-trivial problem of the formal description of how the coding of beliefs in utterances is accomplished. One way of solving this problem requires the formalization of some informal theory of communication and the best candidate for this purpose was the theory formulated by P.H. Grice
+\parencite*[p.22-40]{grice_studies_1989}.
+%(1989, p. 22--40).
+The theory of the conversational implicatures was proposed by him to explain what people have said, that is, what is the meaning of the sentences uttered by them in a concrete context.
+
+Since the context of any utterances is characterized by the point of view of its author, it seems rational to connect the content of the uttered sentences with his beliefs rather than with his knowledge. The everyday communication does not have to be adequate to its subject. Firstly, the  language activity is often effective despite of its inaccuracy. Secondly, knowledge is focused on the part of reality narrower than beliefs so if the activity of communication is related with it, the content of utterances will be too narrow. Thirdly, the category of knowledge is very problematic and this feature would be inherited in the theory of utterances.
+
+When the doxastic background is defined by the discussed axioms of rational beliefs, then connection between this background and utterances may be characterized by the following formula:
+\begin{equation}
+\mathbf{U}(\alpha\wedge \beta)\rightarrow (\mathbf{U}\alpha\wedge \mathbf{U}\beta).\tag*{\textbf{(Ax 6)}}
+\end{equation}
+This implication shows that when complex propositions was expressed so did all its components. The next axiom is as follows:
+\begin{equation}
+\begin{split}
+&\textrm{If} \  l(\beta)<l(\alpha), v(\beta)\subseteq v(\alpha), \beta\vdash \alpha, \neg(\alpha\vdash \beta),\\
+&\textrm{then}\  \mathbf{B}\alpha\rightarrow
+(\mathbf{B}\alpha\wedge\neg \mathbf{B}\beta),
+\end{split}\tag*{\textbf{(Ax 7)}}
+\end{equation}
+where $l$ stands for the length of a formula and $v$ for the number of its variables
+\parencite[p.152]{tokarz_elementy_1993}.
+%(Tokarz, 1993, p.152).
+This complicated axiom is a formal representation of the original H.P. Grice’s idea and it shows how two sentences can be compared by length, quantity of variables and the inferential power. Namely, a sentence is uttered by some user of a language only if he sees no reason to use a stronger sentence. In other words, the communicative actions of a user described by this axiom are maximally informative.
+
+The proposed axiom implies a group of theses that should describe the rational communication strategies. First of all, a rational subject of communication utters sentences which are credible for him. Formally $$\textbf{U}\alpha\rightarrow \textbf{B}\alpha.$$ This formalized representation of the axion of quality is one of the noncontrowersial consequences of Tokarz’s construction.
+The 7\textsuperscript{th} axiom which he accepted is very friendly to the classical logic but in the everyday language activity the utterance of a conjunction not always the same as the conjunction of utterances. Moreover, the following two theorems are provable in the Tokarz system:
+$$\mathbf{U}(\alpha\vee \beta)\rightarrow (\neg\mathbf{B}\alpha\wedge\neg\mathbf{B}\neg \alpha\wedge \neg\mathbf{B}\beta\wedge \neg \mathbf{B}\neg\beta)$$
+and
+$$\mathbf{U}(\alpha\rightarrow \beta)\rightarrow (\neg\mathbf{B}\alpha\wedge\neg\mathbf{B}\neg \alpha\wedge \neg\mathbf{B}\beta\wedge\neg \mathbf{B}\neg\beta).$$
+The mutual definiability of connectives is very well known in the logical systems but it is rarely used in communication. The natural language has more subtle mechanisms to explicate the intended meaning than the logical paraphrases. A more predicable system was constructed by Gazdar but it lost its aim under a complicated formalism
+\parencite[see][]{gazdar_pragmatics_1979}.
+%(see Gazdar, 1979).
+
+ Simpler resolution of shown problem is acceptance as an axiom following formula
+ \parencite[see][p.143]{piechowicz_jezyk_2015}:
+% (see Piechowicz, 2015, p. 143):
+\begin{equation}
+U\alpha\rightarrow B\alpha.\tag*{\textbf{(Ax U)}}
+\end{equation}
+This formula implies a few formal characteristics of some kind communication:
+$$U(\alpha\wedge \beta)\rightarrow (\neg U\neg \alpha\wedge \neg U\neg \beta),$$
+$$U(\alpha\rightarrow \beta)\rightarrow (U\alpha\rightarrow \neg U\neg \beta),$$
+$$U(\alpha\vee \beta)\rightarrow (\neg U\neg \alpha\vee \neg U\neg \beta).$$
+In other words, these consequences of proposed axiom suggest that the acceptance of the premises excludes the contradiction of conclusions.
+The next two formulas show how beliefs determine utterances. Namely:
+$$B(\alpha\rightarrow \beta)\rightarrow (U\alpha\rightarrow \neg U\neg\beta).$$
+$$B(\alpha\rightarrow \beta)\rightarrow (B\alpha\rightarrow \neg U\neg \beta).$$
+The rational communication requires that sentences contradictory to conclusion implied by beliefs or utterances about beliefs should not be used. The reverse implications are the following:
+$$(U\alpha\wedge \neg B\beta)\rightarrow \neg U(\alpha\rightarrow \beta), $$
+$$(B\alpha\wedge \neg B\beta)\rightarrow \neg U(\alpha\rightarrow \beta). $$
+Consequently the implicational sentences are not uttered if there is no doxastic base including the instances when their consequent and their predecent were spoken.  Of course, a projected system is too weak to describe difference between utterances based on the positive sentences and the lack of the utterances of the negative sentences. Moreover, many provable formulas in this system are the of same type so any attempt of describing communication strategies needs stronger formal base.
+
+\section{From beliefs to trust}
+
+\indent The list of the problems shown in the previous section must be enriched by the external controversies. Fist of them is the relativization of the discourse to the epistemic state of one subject of communication. He may be wrong but his beliefs are the only source of communication actions. Of course, anyone’s activity is determined by his subjective states of mind but in many cases it is modified due to actions of other people. In other words, logics of utterances described above are monologic, that is, they give a few norms of producing utterances without consideration of any communication feedback.
+
+The attempt to avoid any problems generated by the logics of utterance demands to consider three elements. First of them is the person of an author and a recipient of an utterance because any communication interaction requires both of them. The second feature is the information transferred from the author to his interlocutor and the third is the system of beliefs of the recipient because utterances made by the author may change some of its elements. The following connectives are the formal representations of these elements: $\textbf{B}_{i}p$ interpreted as ``person i are convinced that p, $\textbf{I}_{ij}p$ --- ``person i informed person j that p'', $\textbf{T}_{ij}p$ which means ``person i trusts person j about p'' which are defined by axioms:
+
+\begin{gather}
+[\mathbf{B}_{i}(p\rightarrow q)\wedge \mathbf{B}_{i}p]\rightarrow \mathbf{B}_{i}q,\tag*{\textbf{(Ax B1)}}\\
+\neg \mathbf{B}_{i}\perp,\tag*{\textbf{(Ax B2)}}\\
+\mathbf{B}_{i}p\rightarrow \mathbf{B}_{i}\mathbf{B}_{i}p,\tag*{\textbf{(Ax B3)}}\\
+\neg \mathbf{B}_{i}p\rightarrow \mathbf{B}_{i}\neg \mathbf{B}_{i}p,\tag*{\textbf{(Ax B4)}}\\
+[\mathbf{I}_{ij}(p\rightarrow q)\wedge \mathbf{I}_{ij}p]\rightarrow \mathbf{I}_{ij}q,\tag*{\textbf{(Ax I1)}}\\
+\neg \mathbf{I}_{ij}\perp,\tag*{\textbf{(Ax I2)}}\\
+(\mathbf{T}_{ij}p\wedge \mathbf{B}_{i}\mathbf{I}_{ij}p)\rightarrow \mathbf{B}_{i}p,\tag*{\textbf{(Ax T1)}}\\
+\mathbf{T}_{ij}p\equiv \mathbf{B}_{i}\mathbf{T}_{ij}p.\tag*{\textbf{(Ax T2)}}
+\end{gather}
+The rules in this system are: \textbf{MP}, \textbf{RG} (for $\mathbf{B}$ and $\mathbf{I}$), \textbf{RE} (for $\mathbf{T}$)
+\parencite[see][p.32n]{liau_belief_2003}.
+%(see Liau, 2003, p. 32n).
+
+The elegant minimalism of this system exhibits many interesting features. First of them is the reference of the concept of trust to the fundamental context in which it arises, namely, the language communication. Trust to the author of utterances allows to enrich the accepted beliefs and, moreover, the conflict between the personal point of view of a recipient and the interlocutor’s opinion forces him to make additional epistemic actions. The second feature is the schema of adaptation of beliefs in any context. Thirdly, the logic of utterance may be reconstructed in a different system but the problems described in previous section can be partially eliminated by taking into account the distinction between the epistemic perspective of the author and of the recipient. For example, the Gricean principle of cooperation that is problematic in the logic of utterances may be paraphrased as follows:
+$$\mathbf{T}^{S}_{ij}p = \mathbf{B}_{i}[(\mathbf{I}_{ij}p\rightarrow \mathbf{B}_{j}p)\wedge (\mathbf{B}_{j}p\rightarrow p)].$$
+This kind of trust---named cautious trust---means that the recipient beliefs that the author of an utterance is honest and credible so, in other words, that his contribution to conversation is  compatible with those information which he wants to present to the recipient. Of course, this formula does not describe the attitude of the author but the expectations of the recipient of communications. Also, it may serve as a base of a simpler formal reconstruction of the epistemic background of everyday communication activity than provided by the utterance logics.
+
+\section{Final remarks}
+
+\indent In the presented article some problems of a formal reconstruction of the notion of belief and utterance were discussed. The achievement of this goal reveals a few interesting stages. Firstly, it is not easy to describe the notion of the rational belief because conclusions implied by the formal systems have weak empirical applications. However, it seems that \textit{doxa} is rational and if it is based on the classical logic it is noncontradictory and introspective. Moreover, rationality requires that convictions about the reliability of premises guarantee the reliability of conclusion.
+
+Secondly, it was not easy to show the relation between beliefs and rational communication. Conversational implicatures which are intuitively obviousare hard to formalize. Even the axiom of quality, which has a simply formal representation, describes the rational conversation as well as the rational silence. For this reason it was necessary to reach to a more complicated formal tool, namely, the trust logic. The BIT (belief-information-trust) system enables a more precise and empirically adequate description of dependencies between the doxastic base, communication and the special epistemic attitude because trust supplies a context to describe the thinking--speaking relation.
+
+Of course, this approach has some disadvantages. The greatest of them is the lack of the source of trust but the perspective shown in the BIT system seems very promising not only for logic and epistemology but for the AI theory as well because this problem may be settled by the argumentation theory
+\parencite{parsons_argument_2014}.
+%(Parsons et. al, 2014).
+Parsons suggests that trust should be described in the argumentation schemes and thanks to that it is possible to identify the stages of reaching a conclusion. Of course, ``none of these patterns represent deductive reasoning all may be wrong under some circumstances, and some may be wrong more often than they are right but all represent forms of reasoning that are plausible under some circumstances''
+\parencite{parsons_argument_2014}.
+%(Parsons et. al, 2014).
+In other words, a more applicable system of trust logic may consider an assertion given by the theory of argumentation. This problem is especially important in machine ethics where the language communication between an artificial ethical agent and a human person seems to play a key role in rationalizing ethical behaviour analogically to the rational ethical behaviour of man.
+
+
+
+
+\end{artengenv}
