@@ -461,6 +461,45 @@ skipabove=1em,splittopskip=0pt,splitbottomskip=0pt%
 	\end{refsection}%
 }
 
+\newenvironment{artplenv2auth}[9]%
+{	\setcounter{footnote}{0}%
+	\setcounter{equation}{0}%
+	\setcounter{section}{0}%
+	\setcounter{subsection}{0}%
+	\setcounter{equation}{0}%
+	\setcounter{table}{0}%
+	\setcounter{figure}{0}%
+	\cleardoublepage%
+	\widowpenalties 3 10000 10000 0%
+	\thispagestyle{plain}\addtocounter{tocnr}{1}\newcommand\tocnr{x\arabic{tocnr}}% empty plain
+	\addtocontents{toc}{\noindent{\tocname{#1}}\\}%
+	\addtocontents{toc}{{\toctititem#4}\dotfill{\subsubsectit\thepage}}%
+	\addtocontents{toc}{\vskip.8\baselineskip}
+	\begin{refsection}%
+		\pasekpl%
+	\begin{raggedleft}%
+		{\flushright\chaptitle\color{black!70}{#2\par}}%
+		\vspace{7mm}%
+		{#9}%
+		\vspace{5mm}%
+		\selectlanguage{english} %
+		{\flushright\chaptitleeng\color{black!50}{#6}}\par%
+	\end{raggedleft}%
+	\vspace{5mm}%
+	{\subsubsectit{\hfill Abstract}}\\{#7}\label{\tocnr}\par%
+	\vspace{2mm}%
+	{\subsubsectit{\hfill Keywords}}\\{#8}%
+	\vspace{5mm}%
+	\selectlanguage{polish}%
+	\markboth{\pagname\protect{#1}}{\pagtit\protect{#3}}%
+	}%
+{%
+	\section*{Bibliografia}%
+	\printbibliography[heading=none]\nopagebreak[4]%
+	\label{e\tocnr}%
+\end{refsection}%
+}
+
 
 
 \newenvironment{editorial}[5]%
