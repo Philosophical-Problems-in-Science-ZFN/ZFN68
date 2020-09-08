@@ -47,8 +47,15 @@
 \usepackage{supertabular}
 
 
-%-----Piechowicz
-%\usepackage{array}
+\usepackage{array}
+\usepackage{ragged2e}
+
+%\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}m{#1}}
+\newcolumntype{L}[1]{>{\RaggedRight\let\newline\arraybackslash}m{#1}}
+
+\usepackage{adjustbox}
+
+
 
 
 %Equation z marginesami
@@ -794,7 +801,10 @@ backend=biber]{biblatex}
 %---prefixy nazwisk minuskułami
 \renewbibmacro*{begentry}{\midsentence}
 
-
+%\renewbibmacro*{bybookauthor}{%
+%  \ifnamesequal{author}{bookauthor}
+%    {\usebibmacro{cite:idem}}
+%    {\printnames{bookauthor}}}
 
 
 \addbibresource{ART_Dada_Piech/Dada.bib}
@@ -830,6 +840,7 @@ backend=biber]{biblatex}
 	urlfrom = {Dostępne na\addcolon},%
 	page = {s\adddot~},%
 	pages = {ss\adddot~},%
+	idem = {Tenże},%
 %	part = {część},%
 %	bytranslator = {Tłum.},%
 %	andothers = {i~in\adddot\addcomma},%
@@ -850,6 +861,10 @@ backend=biber]{biblatex}
 \iflanguage{polish}{\renewcommand*{\finalnamedelim}{\addspace\bibstring{and}~}} %dodaje twardą spację do Autor i~Autor
 \renewcommand\bibnamedelimc{\addnbspace}
 \renewcommand\bibnamedelimd{\addnbspace}
+
+
+    
+%\renewbibmacro*{cite:idem}{\bibstring[\mkidem]{idem\thefield‌{gender}}\setunit{\p‌​rintdelim{nametitled‌​elim}}}
 
 
 

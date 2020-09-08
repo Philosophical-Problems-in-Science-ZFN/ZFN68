@@ -234,35 +234,37 @@ Restricting our analysis to the situations were measurement is possible, we shou
 \begin{table}[H]
 \begin{flushleft}
 \begin{small}
-\begin{tabular}{|m{.19\textwidth}|m{.22\textwidth}|m{.13\textwidth}|m{.3\textwidth}|}
+%\begin{tabular}{|m{.19\textwidth}|m{.22\textwidth}|m{.13\textwidth}|m{.3\textwidth}|}
+\begin{tabular}{|L{.19\textwidth}|L{.22\textwidth}|L{.13\textwidth}|L{.28\textwidth}|}
 \hline
-\centering{\bfseries Type} &
-\centering{\bfseries Specification} &
-\centering{\bfseries Example} &
-\centering\arraybackslash{\bfseries Epistemic consequence(s)}\\\hline
+\multicolumn{1}{|m{.19\textwidth}|}{\centering{\textbf{Type}}} &
+\multicolumn{1}{m{.22\textwidth}|}{\centering{\textbf{Specification}}} &
+\multicolumn{1}{m{.13\textwidth}|}{\centering{\textbf{Example}}} &
+\multicolumn{1}{m{.28\textwidth}|}{\centering\arraybackslash{\textbf{Epistemic consequence(s)}}}\\\hline
 monotomous\footnotemark
 
-(one-to-none) &
+(one-to-none)
+ &
 focuses on a single group, no comparison to other groups is implied &
-Catholics don't eat meat on Fridays. &
-We assume to know the trait prevalence/intensity in the group.\\\hline
+Catholics don't eat meat on Fridays.\vspace*{.5\baselineskip} &
+We assume to know the trait prevalence/intensity in the group.\vspace*{.5\baselineskip}\\\hline
 dichotomous
 
 (one-to-one) &
-there are two relevant groups, one is compared to the other &
+there are two relevant groups, one is compared to the other\vspace*{1.5\baselineskip} &
 Women are more law-abiding than men. &
-We assume to know the relative prevalence/intensity of the trait in both groups. \\\hline
+We assume to know the relative prevalence/intensity of the trait in both groups.\vspace*{1.5\baselineskip} \\\hline
 polytomous
 
 (one-to-many) &
-there are many relevant groups, one is singled out for inspection &
-Poles make brave soldiers. &
+there are many relevant groups, one is singled out for inspection\vspace*{5.5\baselineskip} &
+Poles make brave soldiers.\vspace*{6.5\baselineskip} &
 We assume to know that the prevalence/intensity of the trait in the focal group is above average.
 
 We don't necessarily assume to know anything about any other group in particular. \\\hline
 incremental &
 groups are implicitly defined and ordered by intensity of certain characteristic &
-The older, the more clumsy. &
+The older, the more clumsy.\vspace*{1.5\baselineskip} &
 We assume to know that prevalence/intensity of the trait is monotonously linked to the group-defining metric.\\\hline
 
 \end{tabular}
@@ -368,7 +370,8 @@ To make the link between the probability that \(X_{T} > X_{R}\) and the
 relative location of the two distributions more intuitive, three
 situations have been singled out for inspection:
 
-\begin{enumerate}
+\begin{flushleft}
+\begin{enumerate}[label=\Alph*)]
 \item
   \(\mu_{T} = 2.00\) and \(\sigma_{T} = 0.75\), with the corresponding
   \(p\left( X_{T} > X_{R} \right) = 0.945\);
@@ -379,9 +382,10 @@ situations have been singled out for inspection:
   \(\mu_{T} = 0.25\) and \(\sigma_{T} = 1.50\), with the corresponding
   \(p\left( X_{T} > X_{R} \right) = 0.555\).
 \end{enumerate}
-In A, the stereotype could be considered to be very accurate as it would produce mistakes when judging individuals only 5.5\% of the time. In C, it is barely acceptable, with failure rate at 44.5\%. What about B? With the error rate at 24\% it seems quite unreliable. But before discarding it as a far-fetched overgeneralization, one should recognize that according to a popular metric proposed by
+\end{flushleft}
+In A, the stereotype could be considered to be very accurate as it would produce mistakes when judging individuals only 5.5\% of the time. In C, it is barely acceptable, with failure rate at 44.5\%. What about B? With the error rate at 24\% it seems quite unreliable. But before discarding it as a far-fetched overgeneralization, one should recognize that according to a popular metric proposed by Cohen
 %\label{ref:RNDI9cG7tk2qD}(Cohen, 1988),
-\parencite[][]{cohen_statistical_1988}, %
+\parencite*[][]{cohen_statistical_1988}, %
  this stereotype signifies a definitely large effect size. With Cohen's \textit{d} equal to 1, it is the kind of effect that any social scientist would be more than happy to find in his or her study. Moreover, let us bear in mind that for ``new areas of research inquiry,'' effect sizes of 0.2 would not be utterly uninteresting 
 %\label{ref:RNDDeitIcl8zR}(Cohen, 1988, p.25).
 \parencite[][p.25]{cohen_statistical_1988}. %
@@ -430,11 +434,11 @@ distributions are normal with \(\sigma_{T} = \sigma_{R} = 1\)).}\label{fig2-czar
 When analyzing the accuracy of stereotypes regarding traits measured on
 scales with a limited number of categories it is thus advisable to
 consider all three possible options: \(X_{T} > X_{R}\),
-\(X_{T} = X_{R}\), and \(X_{T} < X_{R}\), as it may well turn out that
+\(X_{T} = X_{R}\), and \(X_{T} < X_{R}\)\footnote{The effect of categorization cannot be held constant by using the contrast between $p(X_T>X_R)$ and $p(X_T<X_R)$ as a measure. The difference $p(X_T>X_R)-p(X_T<X_R)$ tends to decrease, and the ratio $p(X_T>X_R)\ /\ p(X_T<X_R)$ tends to increase as the number of categories becomes smaller and smaller.}, as it may well turn out that
 \(p\left( X_{T} = X_{R} \right)\) is far from negligible.
+\enlargethispage{1\baselineskip}
 
 \section{A few empirical examples of assessing the accuracy of sex stereotypes}
-\enlargethispage{-2\baselineskip}
 Both actual differences between the sexes and associated beliefs about these differences were intensively studied
 %\label{ref:RND1zeV4PeuSF}(Williams and Best, 1982, 1990; Costa, Terracciano and McCrae, 2001; Biernat and Deaux, 2000; Buss, 2003; Pinker, 2003).
 \parencites[][]{williams_measuring_1982}[][]{williams_sex_1990}[][]{costa_gender_2001}[][]{borgatta_sex_2000}[][]{buss_evolution_2003}[][]{pinker_blank_2003}. %
@@ -451,21 +455,24 @@ higher, the same, or lower level on the trait as compared to a randomly
 selected man were computed, using the following formulae, where \emph{v}
 stands for a value of the trait variable\footnote{It may be noted that a
   difference between the ``mirror-image'' probabilities, i.e.
-  \(p\left( X_{F} > X_{M} \right) - p\left( X_{F} < X_{M} \right)\)\emph{,
-  is equal in value to asymmetric Somer's d rank correlation coefficient
-  (Somers, 1962), when predictions are based on subjects' sex.}}:
-\[p\left( X_{F} > X_{M} \right) = \sum_{v = min}^{\max}{p\left( X_{F} = v \right) \bullet p\left( X_{M} < v \right)}\]
+  \(p\left( X_{F} > X_{M} \right) - p\left( X_{F} < X_{M} \right)\),
+  is equal in value to asymmetric Somer's \textit{d} rank correlation coefficient
+  \parencite{somers_new_1962}, when predictions are based on subjects' sex.}:
+\[p\left( X_{F} > X_{M} \right) = \sum_{v = min}^{\max}{p\left( X_{F} = v \right) \cdot p\left( X_{M} < v \right)}\]
 
-\[p\left( X_{F} = X_{M} \right) = \sum_{v = min}^{\max}{p\left( X_{F} = v \right) \bullet p\left( X_{M} = v \right)}\]
+\[p\left( X_{F} = X_{M} \right) = \sum_{v = min}^{\max}{p\left( X_{F} = v \right) \cdot p\left( X_{M} = v \right)}\]
 
-\[p\left( X_{F} < X_{M} \right) = \sum_{v = min}^{\max}{p\left( X_{F} = v \right) \bullet p\left( X_{M} > v \right)}\]
+\[p\left( X_{F} < X_{M} \right) = \sum_{v = min}^{\max}{p\left( X_{F} = v \right) \cdot p\left( X_{M} > v \right)}\]
 
 Figures \ref{fig3-czar} to \ref{fig6-czar} summarize the results.
 
 \begin{figure}[H]
 	\centering
    \includegraphics[width=\textwidth]{ART_Czarnik/Czarnik-img019.jpg}
-\caption{Probabilistic assessment of stereotypical sex differences concerning body structure Polish General Social Survey. Open-ended questions (``What is your height and weight, approximately?'').}\label{fig3-czar}
+\caption{Probabilistic assessment of stereotypical sex differences concerning body structure.\\
+{\footnotesize Own computation from Polish General Social Survey data elicited by open-ended questions
+``What is your height and weight, approximately?''}. 
+}\label{fig3-czar}
 \end{figure}
 
 
@@ -474,7 +481,9 @@ Both height and weight are near-continuous variables and therefore it's very unl
 \begin{figure}[H]
 	\centering
    \includegraphics[width=\textwidth]{ART_Czarnik/Czarnik-img020.jpg}
-\caption{Probabilistic assessment of stereotypical sex differences concerning pay* Study of Human Capital in Poland. Open-ended question with supplementary categorization. \\ * Data for employees with job contracts working full-time within last month, excluding the self-employed.}\label{fig4-czar}
+\caption{Probabilistic assessment of stereotypical sex differences concerning pay.\\
+{\footnotesize Own computation from the Study of Human Capital in Poland data elicited by open-ended questions with supplementary categorization (analysis restricted to employees with job contracts working full-time within last month, excluding self-employed).  }
+}\label{fig4-czar}
 \end{figure}
 
 Sex difference in average remuneration, widely publicized under the heading of ``gender pay gap'', is common knowledge these days. However, the stereotypic assertion that men earn more than women is a rule with quite a lot of exceptions. In Poland, it is correct for more than 60\% of the random individual comparisons, yet every third time the reverse is true. Interestingly, hardly anybody is prompted by such substantial amount of ``counterevidence'' to dismiss male-female wage differential as a mere stereotype.\footnote{Similarly, Browne
@@ -485,7 +494,10 @@ Sex difference in average remuneration, widely publicized under the heading of `
 \begin{figure}[H]
 	\centering
    \includegraphics[width=\textwidth]{ART_Czarnik/Czarnik-img021.jpg}
-\caption{Probabilistic assessment of stereotypical sex differences concerning interest in the mass media content Polish General Social Survey (2002). Interest measured on a 4-point scale: 1 not at all /2 not much /3 quite a bit /4 very much.}\label{fig5-czar}
+\caption{Probabilistic assessment of stereotypical sex differences concerning interest in the mass media content.\\
+{\footnotesize Own computation from Polish General Social Survey data (2002). Interest was measured on a 4-point scale: 1 not at all /2 not much /3 quite a bit /4
+very much.}
+}\label{fig5-czar}
 \end{figure}
 
 In Figure \ref{fig5-czar}, people's interests are sorted by gender differences, from those most typical of women at the top to those most typical of men, at the bottom. Some of those differences are congruent with popular sex stereotypes (e.g. those concerning fashion or technology), but even then many exceptions arise. As may be expected for traits measured using categorical scales, a substantial number of male-female comparisons produce gender-equal outcomes. Still, it is unsurprising why someone seeking medical advice from a random stranger would turn for help to a woman rather than a man. As far as a man and a woman differ in their levels of medical interests and as far as the intensity of such expressed interests is proportional to actual cognizance, it is a woman who is about 2.5 times more likely to have some acquaintance with health topics. By the same token, if one seeks technological advice, it's three times more likely that of any two random strangers, one man and one woman, the man will be the one more up-to-date with matters of technology.
@@ -493,7 +505,8 @@ In Figure \ref{fig5-czar}, people's interests are sorted by gender differences, 
 \begin{figure}[h]
 	\centering
    \includegraphics[width=\textwidth]{ART_Czarnik/Czarnik-img022.jpg}
-\caption{Probabilistic assessment of stereotypical sex differences concerning skill self-evaluation Study of Human Capital in Poland (2017). Skill level self-valuated on a 5-point scale: 1 low /2 basic /3 medium /4 high /5 very high.}\label{fig6-czar}
+\caption{Probabilistic assessment of stereotypical sex differences concerning skill self-evaluation.\\
+{\footnotesize Own computation from the Study of Human Capital in Poland data (2017). Skill level was self-evaluated on a 5-point scale: 1 low /2 basic /3 medium /4 high /5 very high.}}\label{fig6-czar}
 \end{figure}
 
 One can observe that stereotypical disparities in skill self-evaluations are in accord with the kinds of jobs men and women tend to perform in the gender-segregated labor market
@@ -520,7 +533,7 @@ Research participants might be fairly accurate, for example, in their estimates 
 Yet this question \textit{can} be answered by applying the probabilistic approach. It is even more to the point for the very reason that it is our probabilistic beliefs that inform our decisions concerning individuals. A typical question you would ask yourself when pressed to choose, with certain aim in mind, one from two or more persons would not be ``what is the difference of means between the groups to which these persons belong?'', and even less ``how large is the dispersion of the relevant characteristic?''. It would be ``which one of them is most likely to give me what I need?''. This probabilistic perception can easily be measured by asking people to imagine a familiar situation and make the assessment of comparative probabilities. By means of an illustration, consider how subjects could assess the accuracy of the stereotypic ``men are taller than women'' assertion.
 
 \myquote{
-Imagine that you enter an elevator in a large shopping mall and two random persons—one man and one woman—unknown to you and to each other,\footnote{It is important to exclude the possibility that a man and a woman are a couple, so that subjects' judgment about general differences would not be contaminated by their beliefs about relative height of mated individuals. } enter after you. How likely it is that: (1) the man will be the taller of the two, (2) the woman will be the taller of the two, (3) they will be of equal height (with precision of, say, 1 cm). Make sure that probabilities add to 100\%.\footnote{It is a subject for some experimentation to find out how this task could be facilitated by a particular method of registering the probabilities (e.g. by a visual representation of probabilities on screen). }
+Imagine that you enter an elevator in a large shopping mall and two random persons—one man and one woman—unacquainted to you and to each other,\footnote{It is important to exclude the possibility that a man and a woman are a couple, so that subjects' judgment about general differences would not be contaminated by their beliefs about relative height of mated individuals. } enter after you. How likely it is that: (1) the man will be the taller of the two, (2) the woman will be the taller of the two, (3) they will be of equal height (with precision of, say, 1 cm). Make sure that probabilities add to 100\%.\footnote{It is a subject for some experimentation to find out how this task could be facilitated by a particular method of registering the probabilities (e.g. by a visual representation of probabilities on screen). }
 }
 
 A very welcome aspect of this approach is that it explicitly tackles the question of whether subjects' beliefs about certain group(s) of people are of a rigid, all-or-none, kind. This should provide solid empirical evidence to inform the dispute over sensibility of making stereotypes untrue by definition. In all likelihood, for many traits it will turn out that actually very few people incorrectly perceive the stereotyped group(s) as completely homogeneous.
