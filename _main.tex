@@ -99,7 +99,7 @@
 \usepackage[title]{appendix}
 \PassOptionsToPackage{hyphens}{url}
 \usepackage{hyperref} %to nowsza wersja pakietu url, lepsza m.in. robie linki hyperref
-\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black, breaklinks=true}  %to sprawia że nie widać w pdfie aktywnych linków (od GM)
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black, breaklinks=true, linktocpage}  %to sprawia że nie widać w pdfie aktywnych linków (od GM)
 \urlstyle{rm}
 \usepackage[hyphens]{url}
 
@@ -122,7 +122,7 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 %-----spady---------
 %\usepackage[cam,a4,center]{crop}
 %\usepackage[width=151mm,height=211mm,center,cam,noinfo]{crop} % konsultuj z dokumentacją
-%\usepackage[width=151mm,height=211mm,center,noinfo]{crop} % bex lini cięcia, konsultuj z dokumentacją
+\usepackage[width=151mm,height=211mm,center,noinfo]{crop} % bex lini cięcia, konsultuj z dokumentacją
 
 \input{hyphenation}
 
@@ -322,13 +322,13 @@ skipabove=1em,splittopskip=0pt,splitbottomskip=0pt%
 \newcounter{tocnr}\setcounter{tocnr}{0}
 
 %\newcommand{\pasekpl}{%
-%\placetextbox{153mm}{-3mm}{\begin{subsubsectit}\infbiblio\pageref{\tocnr}\textendash\pageref{e\tocnr}\end{subsubsectit}\par%
+%\placetextbox{153mm}{-3mm}{\begin{subsubsectit}\infbiblio\pageref*{\tocnr}\textendash\pageref*{e\tocnr}\end{subsubsectit}\par%
 %	\vspace{.4mm}%
 %	\noindent\raisebox{-1.75pt}{\includegraphics[height=9.5pt]{images/CC-BY-NC-ND}}%
 %	\begin{subsubsectit}\begin{small}\enspace CC-BY-NC-ND 4.0\end{small}\end{subsubsectit}}%
 %}
 %\newcommand{\pasekeng}{%
-%	\placetextbox{153mm}{-3mm}{\begin{subsubsectit}\infbiblioeng\pageref{\tocnr}\textendash\pageref{e\tocnr}\end{subsubsectit}\par%
+%	\placetextbox{153mm}{-3mm}{\begin{subsubsectit}\infbiblioeng\pageref*{\tocnr}\textendash\pageref*{e\tocnr}\end{subsubsectit}\par%
 %		\vspace{.2mm}%
 %		\noindent\raisebox{-1.75pt}{\includegraphics[height=9.5pt]{images/CC-BY-NC-ND}}%
 %		\begin{subsubsectit}\begin{small}\enspace CC-BY-NC-ND 4.0\end{small}\end{subsubsectit}}%
@@ -340,7 +340,7 @@ skipabove=1em,splittopskip=0pt,splitbottomskip=0pt%
 				\zfntitle\: (\zfntitleeng)%
 		\par\vspace{.1mm}%
 		nr \numerarabski\ (\rok), %
-		ss.~\pageref{\tocnr}\textendash\pageref{e\tocnr} \enspace $\bullet$ \enspace\end{small}%
+		ss.~\pageref*{\tocnr}\textendash\pageref*{e\tocnr} \enspace $\bullet$ \enspace\end{small}%
 	\begin{footnotesize}CC-BY-NC-ND 4.0\end{footnotesize}\end{subsubsectit}%
 		\enspace\raisebox{-1.75pt}{\includegraphics[height=9.5pt]{images/CC-BY-NC-ND}}}%
 }
@@ -349,7 +349,7 @@ skipabove=1em,splittopskip=0pt,splitbottomskip=0pt%
 				\zfntitleeng\: (\zfntitle)%
 		\par\vspace{.1mm}%
 		No \numerarabski\ (\rok), %
-		pp.~\pageref{\tocnr}\textendash\pageref{e\tocnr} \enspace $\bullet$ \enspace\end{small}%
+		pp.~\pageref*{\tocnr}\textendash\pageref*{e\tocnr} \enspace $\bullet$ \enspace\end{small}%
 		\begin{footnotesize}CC-BY-NC-ND 4.0\end{footnotesize}\end{subsubsectit}%
 		\enspace\raisebox{-1.75pt}{\includegraphics[height=9.5pt]{images/CC-BY-NC-ND}}}%
 }
@@ -367,15 +367,16 @@ skipabove=1em,splittopskip=0pt,splitbottomskip=0pt%
 	\cleardoublepage%
 	\widowpenalties 3 10000 10000 0%
 	\thispagestyle{plain}\addtocounter{tocnr}{1}\newcommand\tocnr{x\arabic{tocnr}}% empty plain
+	\phantomsection\label{\tocnr}% 
 	\addtocontents{toc}{\noindent{\tocname{#1}}\\}%
-	\addtocontents{toc}{{\toctititem#4}\dotfill{\subsubsectit\thepage}}%
+	\addtocontents{toc}{{\toctititem#4}\dotfill{\subsubsectit\pageref{\tocnr}}}%
 	\addtocontents{toc}{\vskip.8\baselineskip}
 	\begin{refsection}%
 		\pasekpl%
 	\begin{raggedleft}%
 		{\flushright\chaptitle\color{black!70}{#2\par}}%
 		\vspace{7mm}%
-		{\flushright\subbold{#1}\\\subsubsectit\small{#5}\label{\tocnr}\par}%
+		{\flushright\subbold{#1}\\\subsubsectit\small{#5}\par}%
 		\vspace{5mm}%
 		\selectlanguage{english} %
 		{\flushright\chaptitleeng\color{black!50}{#6}}\par%
@@ -395,6 +396,13 @@ skipabove=1em,splittopskip=0pt,splitbottomskip=0pt%
 \end{refsection}%
 }
 
+\newcounter{labelhere}
+\makeatletter
+\newcommand\pagerefhere{%
+ \stepcounter{labelhere}%
+ \pageref{here\thelabelhere}\label{here\thelabelhere}}
+
+
 \newenvironment{artengenv}[7]%
 {	\setcounter{footnote}{0}%
 	\setcounter{equation}{0}%
@@ -406,8 +414,9 @@ skipabove=1em,splittopskip=0pt,splitbottomskip=0pt%
 	\cleardoublepage%
 	\widowpenalties 3 10000 10000 0%
 	\thispagestyle{plain}\addtocounter{tocnr}{1}\newcommand\tocnr{x\arabic{tocnr}}% empty plain
+	\phantomsection\label{\tocnr}% 
 	\addtocontents{toc}{\noindent{\tocname{#1}}\\}%
-	\addtocontents{toc}{{\toctititem#4}\dotfill{\subsubsectit\thepage}}%
+	\addtocontents{toc}{{\toctititem#4}\dotfill{\subsubsectit\pageref{\tocnr}}}%
 	\addtocontents{toc}{\vskip.8\baselineskip}
 	\begin{refsection}%
 		\selectlanguage{english}%
@@ -415,7 +424,7 @@ skipabove=1em,splittopskip=0pt,splitbottomskip=0pt%
 		\begin{raggedleft}%
 			{\flushright\chaptitle\color{black!70}{#2\par}}%
 			\vspace{7mm}%
-			{\flushright\subbold{#1}\\\subsubsectit\small{#5}\label{\tocnr}\par}%
+			{\flushright\subbold{#1}\\\subsubsectit\small{#5}\par}%
 		\end{raggedleft}%
 		\vspace{5mm}%
 		{\subsubsectit{\hfill Abstract}}\\{#6}\par%
@@ -443,8 +452,9 @@ skipabove=1em,splittopskip=0pt,splitbottomskip=0pt%
 	\cleardoublepage%
 	\widowpenalties 3 10000 10000 0%
 	\thispagestyle{plain}\addtocounter{tocnr}{1}\newcommand\tocnr{x\arabic{tocnr}}% empty plain
+	\phantomsection\label{\tocnr}% 
 	\addtocontents{toc}{\noindent{\tocname{#1}}\\}%
-	\addtocontents{toc}{{\toctititem#4}\dotfill{\subsubsectit\thepage}}%
+	\addtocontents{toc}{{\toctititem#4}\dotfill{\subsubsectit\pageref{\tocnr}}}%
 	\addtocontents{toc}{\vskip.8\baselineskip}
 	\begin{refsection}%
 		\selectlanguage{english}%
@@ -455,7 +465,7 @@ skipabove=1em,splittopskip=0pt,splitbottomskip=0pt%
 			{#8}%
 		\end{raggedleft}%
 		\vspace{5mm}%
-		{\subsubsectit{\hfill Abstract\label{\tocnr}}}\\{#6}\par%
+		{\subsubsectit{\hfill Abstract}}\\{#6}\par%
 		\vspace{2mm}%
 		{\subsubsectit{\hfill Keywords}}\\{#7}%
 		\vspace{5mm}%
@@ -479,13 +489,14 @@ skipabove=1em,splittopskip=0pt,splitbottomskip=0pt%
 	\cleardoublepage%
 	\widowpenalties 3 10000 10000 0%
 	\thispagestyle{plain}\addtocounter{tocnr}{1}\newcommand\tocnr{x\arabic{tocnr}}% empty plain
+	\phantomsection\label{\tocnr}%
 	\addtocontents{toc}{\noindent{\tocname{#1}}\\}%
-	\addtocontents{toc}{{\toctititem#4}\dotfill{\subsubsectit\thepage}}%
+	\addtocontents{toc}{{\toctititem#4}\dotfill{\subsubsectit\pageref{\tocnr}}}%
 	\addtocontents{toc}{\vskip.8\baselineskip}
 	\begin{refsection}%
 		\pasekpl%
 	\begin{raggedleft}%
-		{\flushright\chaptitle\color{black!70}{#2\label{\tocnr}\par}}%
+		{\flushright\chaptitle\color{black!70}{#2\par}}%
 		\vspace{7mm}%
 		{#9}%
 		\vspace{5mm}%
@@ -520,8 +531,9 @@ skipabove=1em,splittopskip=0pt,splitbottomskip=0pt%
 	\cleardoublepage%
 	\widowpenalties 3 10000 10000 0%
 	\thispagestyle{plain}\addtocounter{tocnr}{1}\newcommand\tocnr{x\arabic{tocnr}}% empty plain
+	\phantomsection\label{\tocnr}%
 	\addtocontents{toc}{\noindent{\tocname{#1}}\\}%
-	\addtocontents{toc}{{\toctititem#4}\dotfill{\subsubsectit\thepage}}%
+	\addtocontents{toc}{{\toctititem#4}\dotfill{\subsubsectit\pageref{\tocnr}}}%
 	\addtocontents{toc}{\vskip.8\baselineskip}
 		\pasekpl%
 		\begin{raggedleft}%
@@ -530,7 +542,7 @@ skipabove=1em,splittopskip=0pt,splitbottomskip=0pt%
 			\selectlanguage{english} %
 			{\flushright\chaptitleeng\color{black!50}{#5}}\par%
 			\vspace{5mm}%
-			{\flushright\subbold{#1}\label{\tocnr}\par}%
+			{\flushright\subbold{#1}\par}%
 			\vspace{5mm}%
 		\end{raggedleft}%
 		\vspace{5mm}%
@@ -555,6 +567,7 @@ skipabove=1em,splittopskip=0pt,splitbottomskip=0pt%
 	\clearpage%
 	\widowpenalties 2 10000 0%
 	\thispagestyle{empty}\addtocounter{tocnr}{1}\newcommand\tocnr{x\arabic{tocnr}}% empty plain
+	\phantomsection\label{\tocnr}% 
 	\begin{multicols}{2}%
 		\raggedcolumns%
 		\begin{kolumnada}%
@@ -562,7 +575,7 @@ skipabove=1em,splittopskip=0pt,splitbottomskip=0pt%
 		\selectlanguage{polish} %
 		\pasekpl%
 		\begin{raggedleft}%
-			{\flushright\rectitle\color{black!70}{#2\label{\tocnr}\par}}%chaptitle
+			{\flushright\rectitle\color{black!70}{#2\par}}%chaptitle
 			\vspace{2mm}%
 			{\flushright\reclight\small{#4}\par}%subbold reclight
 			\vspace{3mm}%
@@ -571,7 +584,7 @@ skipabove=1em,splittopskip=0pt,splitbottomskip=0pt%
 		\fancyhead[C]{\pagtit{Recenzje}}
 		\markboth{}{}%
 		\addtocontents{toc}{\noindent{\tocname{#1}}\\}%
-		\addtocontents{toc}{{\toctititem#3}\dotfill{\subsubsectit\thepage}}%
+		\addtocontents{toc}{{\toctititem#3}\dotfill{\subsubsectit\pageref{\tocnr}}}%
 		\addtocontents{toc}{\vskip.8\baselineskip}}%
 	{%
 		\begin{spacing}{0.9}%
@@ -598,8 +611,9 @@ skipabove=1em,splittopskip=0pt,splitbottomskip=0pt%
 	\clearpage%
 	\widowpenalties 2 10000 0%
 	\thispagestyle{empty}\addtocounter{tocnr}{1}\newcommand\tocnr{x\arabic{tocnr}}% empty plain
+	\phantomsection\label{\tocnr}% 
 	\addtocontents{toc}{\noindent{\tocname{#1}}\\}%
-	\addtocontents{toc}{{\toctititem#3}\dotfill{\subsubsectit\thepage}}%
+	\addtocontents{toc}{{\toctititem#3}\dotfill{\subsubsectit\pageref{\tocnr}}}%
 	\addtocontents{toc}{\vskip.8\baselineskip}
 	\begin{multicols}{2}%
 		\raggedcolumns%
@@ -608,7 +622,7 @@ skipabove=1em,splittopskip=0pt,splitbottomskip=0pt%
 				\selectlanguage{english} %
 				\pasekeng%
 				\begin{raggedleft}%
-					{\flushright\rectitle\color{black!70}{#2\label{\tocnr}\par}}%chaptitle
+					{\flushright\rectitle\color{black!70}{#2\par}}%chaptitle
 					\vspace{2mm}%
 					{\flushright\reclight\small{#4}\par}%subbold reclight
 					\vspace{3mm}%
@@ -1087,11 +1101,11 @@ backend=biber]{biblatex}
 
 \sekcja{Z prac Komisji Filozofii Nauk PAU}{Proceedings of the PAU Commission\\\ on the Philosophy of Science}
 
-\input{ART_Kawalec/Kawalec-PU.tex}
+\input{ART_Kawalec/Kawalec-PU.tex} %bw-col
 
 \input{ART_Czarnik/Czarnik-PU.tex}
 
-\input{ART_Szybka/Szybka-PU.tex}
+\input{ART_Szybka/Szybka-PU.tex} %bw-col
 
 
 
