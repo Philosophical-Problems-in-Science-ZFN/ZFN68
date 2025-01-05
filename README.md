@@ -1,4 +1,4 @@
-# Issue TOC
+# Philosophical Problems in Science (ZFN), No. 68 (2020)
 
 ![Issue Cover](https://zfn.edu.pl/public/journals/1/cover_issue_34_en_US.jpg)
 
